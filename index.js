@@ -5,6 +5,7 @@ const data = require("./DataBase/iakt.json")
 const server = http.createServer(app)
 
 app.use(express.static("public"))
+app.use(express.json())
 
 app.get("/iakt", (req, res)=>{
   res.json(data)
