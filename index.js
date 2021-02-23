@@ -1,14 +1,15 @@
+const http = require("http")
 const express = require("express")
 const app = express()
 const data = require("./DataBase/iakt.json")
+const server = http.Server(app)
 
-app.get("/", (req, res)=>{
-  res.sendFile(__dirname + "/index.html")
-})
+app.use("/", express.static("public"))
+
 app.get("/iakt", (req, res)=>{
   res.json(data)
 })
 
-app.listen(8080 || process.env.PORT, ()=>{
+server.listen(8080 || process.env.PORT, ()=>{
   console.log("Port Running")
 })
