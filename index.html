@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <title>Unknown</title>
+</head>
+<body class="bg-gray-200"> 
+  <div id="quti" class="mx-10"></div>
+  <script>
+    fetch("./DataBase/iakt.json").then((Response)=>{
+      Response.json().then((data)=>{
+        for(var i = 0; i<data.length; i++){
+          const container = document.createElement("div")
+          container.className = "flex justify-between items-center bg-white rounded my-2"
+          const savol = document.createElement("p")
+          savol.className = 'w-1/3 py-1 px-5 text-lg'
+          const javob = document.createElement("h5")
+          javob.className = 'w-1/3 text-center text-lg font-medium'
+          savol.innerHTML = `${data[i].id}.  ${data[i].Savol}`
+          javob.innerHTML = data[i].Javob
+          container.appendChild(savol)
+          container.appendChild(javob)
+          document.getElementById("quti").appendChild(container)
+        }
+      })
+    })
+  </script>
+</body>
+</html>
