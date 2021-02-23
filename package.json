@@ -1,0 +1,22 @@
+{
+  "name": "fan",
+  "version": "1.0.0",
+  "description": "Unknown",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OgabekYuldoshev/fan.git"
+  },
+  "author": "Unknown",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OgabekYuldoshev/fan/issues"
+  },
+  "homepage": "https://github.com/OgabekYuldoshev/fan#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -8,17 +8,17 @@
   <title>Unknown</title>
 </head>
 <body class="bg-gray-200"> 
-  <div id="quti" class="mx-10"></div>
+  <div id="quti" class="sm:mx-10 mx-5"></div>
   <script>
-    fetch("./DataBase/iakt.json").then((Response)=>{
+    fetch("/iakt").then((Response)=>{
       Response.json().then((data)=>{
         for(var i = 0; i<data.length; i++){
           const container = document.createElement("div")
-          container.className = "flex justify-between items-center bg-white rounded my-2"
+          container.className = "flex flex-col sm:flex-row justify-between items-center bg-white rounded my-2"
           const savol = document.createElement("p")
-          savol.className = 'w-1/3 py-1 px-5 text-lg'
+          savol.className = 'sm:w-2/5 w-full py-1 px-1 sm:px-5 text-lg'
           const javob = document.createElement("h5")
-          javob.className = 'w-1/3 text-center text-lg font-medium'
+          javob.className = 'sm:w-2/5 w-full text-center text-lg font-medium'
           savol.innerHTML = `${data[i].id}.  ${data[i].Savol}`
           javob.innerHTML = data[i].Javob
           container.appendChild(savol)
