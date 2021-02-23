@@ -17,10 +17,11 @@
   },
   "homepage": "https://github.com/OgabekYuldoshev/fan#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1"
   },
   "engines": {
-   "node": "14.x",
-   "npm": "6.x"
-   }
+    "node": "14.x",
+    "npm": "6.x"
+  }
 }
