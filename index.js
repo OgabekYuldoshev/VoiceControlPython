@@ -10,6 +10,8 @@ app.get("/iakt", (req, res)=>{
   res.json(data)
 })
 
-server.listen(8080 || process.env.PORT , ()=>{
-  console.log("Port Running")
+const port = 8080 || process.env.PORT
+
+server.listen(port, ()=>{
+  console.log(`${port} Running...`)
 })
